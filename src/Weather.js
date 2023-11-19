@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Audio } from "react-loader-spinner";
+import { Hourglass } from "react-loader-spinner";
 
 export default function Weather(props) {
   function showWeather(response) {
@@ -20,14 +20,14 @@ export default function Weather(props) {
 
   return (
     <div>
-      <Audio
+      <Hourglass
+        visible={true}
         height="80"
         width="80"
-        radius="9"
-        color="blue"
-        ariaLabel="three-dots-loading"
-        wrapperStyle
-        wrapperClass
+        ariaLabel="hourglass-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        colors={["#306cce", "#72a1ed"]}
       />
       <h2>Hello Weather</h2>;
     </div>
